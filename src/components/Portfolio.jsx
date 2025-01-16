@@ -75,12 +75,12 @@ const Portfolio = () => {
               <p className='text-gray-300 mb-4'>{project.description}</p>
               <div className='flex space-x-4'>
                 <a href={project.links.site} target='blank'
-                  className='px-4 py-2 bg-[#12fdae] text-[#000] rounded-lg hover:bg-[#cdfeee]
+                  className='px-4 py-2 bg-[#66ffcc] text-[#000] rounded-lg hover:bg-[#cdfeee]
                                         transition duration-300'>
                   View Site
                 </a>
                 <a href={project.links.github}
-                  className='px-4 py-2 bg-[#12fdae] text-[#000] rounded-lg hover:bg-[#cdfeee]
+                  className='px-4 py-2 bg-[#66ffcc] text-[#000] rounded-lg hover:bg-[#cdfeee]
                                         transition duration-300'>
                   <AiOutlineGithub />
                 </a>

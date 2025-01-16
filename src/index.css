@@ -5,7 +5,7 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  background-color: #1d1d2b;
+
 }
 
 h2 {
@@ -17,7 +17,7 @@ p {
 }
 
 span {
-  @apply text-purple-600
+  @apply text-[#001A11]
 }
 
 
@@ -30,5 +30,5 @@ span {
 }
 
 .bg-primary-color {
-    @apply bg-purple-600
+    @apply bg-[#001A11]
 }

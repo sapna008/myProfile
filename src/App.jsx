@@ -9,14 +9,15 @@ import ParticlesComponent from "./components/particle";
 export default function App() {
   return (
     <>
-      <Navbar/>
       <ParticlesComponent id="particles"/>
+      <Navbar/>
       <Hero />
       <Skills/>
       <Portfolio/>
       <Experience/>
       <Contact/>
       <Footer/>
+
     </>
   )
 }

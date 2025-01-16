@@ -12,7 +12,7 @@ const Contact = () => {
           <div className="space-y-6 sm:space-y-8">
             <div className="text-gray-300">
               <h3 className="text-3xl sm:text-4xl font-semibold mb-4 sm:mb-6">
-                About <span className="text-[#12fdae]">Me</span>
+                About <span className="text-[#66ffcc]">Me</span>
               </h3>
               <p className="text-sm sm:text-base leading-6 sm:leading-7 text-justify sm:text-left">
                 Dynamic full-stack web developer with a strong proficiency in the MERN stack 
@@ -28,10 +28,10 @@ const Contact = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
-                  11<span className="text-[#12fdae]">+</span>
+                  11<span className="text-[#66ffcc]">+</span>
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base">
-                  <span className="text-[#12fdae]/40">Projects</span>
+                  <span className="text-[#66ffcc]/40">Projects</span>
                 </p>
               </motion.div>
             </div>
@@ -63,8 +63,8 @@ const Contact = () => {
                 id="email"
                 placeholder="Your Email ..."
                 name="email"
-                className="w-full rounded-lg border border-[#12fdae]/50 bg-gray-900/50 py-2 px-4 text-gray-200 
-                         placeholder-gray-400 focus:border-[#12fdae] focus:outline-none focus:ring-1 
+                className="w-full rounded-lg border border-[#66ffcc]/50 bg-gray-900/50 py-2 px-4 text-gray-200 
+                         placeholder-gray-400 focus:border-[#66ffcc] focus:outline-none focus:ring-1 
                          focus:ring-[#12fdae] transition-colors duration-300"
                 whileFocus={{ scale: 1.01 }}
               />
@@ -84,8 +84,8 @@ const Contact = () => {
             <motion.button
               type="submit"
               className="w-full py-3 rounded-lg text-gray-900 font-semibold text-lg sm:text-xl 
-                       bg-[#12fdae] hover:bg-[#0ee89d] transition-all duration-300 shadow-lg 
-                       hover:shadow-[#12fdae]/20"
+                       bg-[#66ffcc] hover:bg-[#66ffcc] transition-all duration-300 shadow-lg 
+                       hover:shadow-[#66ffcc]/20"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
