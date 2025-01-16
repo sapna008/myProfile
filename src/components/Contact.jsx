@@ -53,8 +53,8 @@ const Contact = () => {
                 id="name"
                 placeholder="Your Name ..."
                 name="name"
-                className="w-full rounded-lg border border-[#12fdae]/50 bg-gray-900/50 py-2 px-4 text-gray-200 
-                         placeholder-gray-400 focus:border-[#12fdae] focus:outline-none focus:ring-1 
+                className="w-full rounded-lg border border-[#66ffcc]/50 bg-gray-900/50 py-2 px-4 text-gray-200 
+                         placeholder-gray-400 focus:border-[#66ffcc] focus:outline-none focus:ring-1 
                          focus:ring-[#12fdae] transition-colors duration-300"
                 whileFocus={{ scale: 1.01 }}
               />

@@ -10,6 +10,7 @@ body {
 
 h2 {
   @apply text-xl md:text-4xl
+  
 }
 
 p {
@@ -31,4 +32,10 @@ span {
 
 .bg-primary-color {
     @apply bg-[#001A11]
+}
+#particles canvas{
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

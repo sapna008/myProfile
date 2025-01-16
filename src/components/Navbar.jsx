@@ -81,7 +81,7 @@ const Navbar = () => {
                                 smooth={true} 
                                 offset={50} 
                                 duration={500}
-                                className='text-gray-200 hover:text-[#12fdae] transition-colors duration-300 text-lg'
+                                className='text-gray-200 hover:text-[#12fdae] hover:cursor-pointer transition-colors duration-300 text-lg'
                             >
                                 {item.title}
                             </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                                     smooth={true} 
                                     offset={50} 
                                     duration={500}
-                                    className='text-gray-200 text-2xl sm:text-3xl font-semibold hover:text-[#12fdae] transition-colors duration-300'
+                                    className='text-gray-200 text-2xl sm:text-3xl font-semibold hover:cursor-pointer hover:text-[#12fdae]  transition-colors duration-300'
                                 >
                                     {item.title}
                                 </Link>

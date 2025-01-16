@@ -43,8 +43,8 @@ const Experience = () => {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 1 }}
-                            className="w-full min-h-[150px] border border-[#66ffcc] p-4 sm:p-6 rounded-lg shadow-md
-                                       hover:shadow-xl transition-shadow duration-300 bg-[#66ffcc]/10"
+                            className="w-full sm:w-96 min-h-[150px] border border-[#66ffcc] p-4 sm:p-6 rounded-lg shadow-md
+               hover:shadow-xl transition-shadow duration-300 bg-gray-900/50 mx-auto"
                         >
                             <h2 className="text-gray-100 text-lg sm:text-2xl font-semibold">
                                 {experience.company}
@@ -54,6 +54,8 @@ const Experience = () => {
                                 {experience.description}
                             </p>
                         </motion.div>
+
+
                     </Reveal>
                 ))}
             </motion.div>
