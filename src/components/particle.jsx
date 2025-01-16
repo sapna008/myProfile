@@ -34,7 +34,7 @@ const ParticlesComponent = (props) => {
     () => ({
       background: {
         color: {
-          value: "rgb(45, 46, 51)",
+          value: "rgb(29, 30, 33)",
         },
       },
       fpsLimit: 120,
