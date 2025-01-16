@@ -1,9 +1,9 @@
 import React from 'react';
-import project1 from "../assets/project1.png"
-import project2 from "../assets/project2.png"
-import project4 from "../assets/project4.png"
-import project5 from "../assets/project5.png"
-import project6 from "../assets/project6.png"
+import project1 from "../assets/project1.jpeg"
+import project2 from "../assets/project2.jpeg"
+import project4 from "../assets/project3.jpeg"
+import project5 from "../assets/project-4.png"
+import project6 from "../assets/project-5.jpeg"
 import { AiFillGithub, AiOutlineGithub } from 'react-icons/ai'
 import Reveal from './Reveal';
 
@@ -63,13 +63,13 @@ const Portfolio = () => {
             <Reveal>
             <div key={index} 
             className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} mb-12`}>
-                <div className='w-full md:w-1/2 p-4'>
-                    <img
-                        src={project.img}
-                        alt={project.title}
-                        className='w-full h-full object-cover rounded-lg shadow-lg'
-                    />
-                </div>
+<div className='w-full md:w-1/2 p-4'>
+    <img
+        src={project.img}
+        alt={project.title}
+        className='w-full h-full object-cover rounded-lg shadow-lg border-2 border-[#12fdae]/40'
+    />
+</div>
                 <div className='w-full md:w-1/2 p-4 flex flex-col justify-center'>
                     <h3 className='text-2xl font-semibold text-gray-200 mb-4'>{project.title}</h3>
                     <p className='text-gray-300 mb-4'>{project.description}</p>

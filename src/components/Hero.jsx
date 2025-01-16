@@ -1,11 +1,9 @@
 import React from "react";
-import profilepic from "../assets/profpic.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import {
     AiOutlineGithub,
     AiOutlineInstagram,
-    AiOutlineLink,
     AiOutlineLinkedin,
 } from "react-icons/ai";
 import {
@@ -14,21 +12,20 @@ import {
     DiJavascript1,
     DiNodejsSmall,
     DiReact,
-
 } from "react-icons/di";
-
 import { motion } from "framer-motion";
-
 
 const Hero = () => {
     return (
-        <div className="mt-24 max-w-[1200px] mx-auto relative">
-            <div className="grid md:grid-cols-2 place-items-center gap-8">
+        <div className="mt-16 sm:mt-20 md:mt-24 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="grid md:grid-cols-2 place-items-center gap-8 lg:gap-12">
+                {/* Left Content Section */}
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
+                    className="text-center md:text-left"
                 >
                     <TypeAnimation
                         sequence={[
@@ -41,7 +38,7 @@ const Hero = () => {
                         ]}
                         speed={50}
                         repeat={Infinity}
-                        className="font-bold text-gray-400 text-xl md:text-5xl italic- mb-4"
+                        className="font-bold text-gray-400 text-lg sm:text-xl md:text-3xl lg:text-5xl italic mb-4"
                     />
 
                     <motion.p
@@ -49,7 +46,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="text-gray-200 md:text-7xl text-5xl tracking-tight mb-4"
+                        className="text-gray-200 text-3xl sm:text-4xl md:text-5xl lg:text-7xl tracking-tight mb-4"
                     >
                         HEY, I AM <br />
                         <span className="text-[#66ffcc]">Sapna Sarkar</span>
@@ -60,7 +57,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 1 }}
-                        className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
+                        className="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl mb-6 mx-auto md:mx-0 max-w-[300px] md:max-w-[500px]"
                     >
                         I am a passionate fullstack developer.
                     </motion.p>
@@ -70,106 +67,90 @@ const Hero = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 1.5 }}
-                        className="flex flex-row items-center gap-6 my-4 md:mb-0"
+                        className="flex flex-col sm:flex-row items-center gap-6 my-4 md:mb-0"
                     >
                         <motion.a
                             href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67877864f7b3074e912ad0cc"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }}
-                            className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
-                   text-[#66ffcc] rounded-xl text-center"
+                            className="z-10 cursor-pointer font-bold text-[#66ffcc] px-6 py-3 border rounded-xl text-center w-full sm:w-auto"
                         >
                             Preview CV
                         </motion.a>
-                        <div className="flex gap-6 flex-row text-4xl md:text-6xl text-[#66ffcc] z-20">
-                            <motion.a
-                                whileHover={{ scale: 1.2 }}
-                                href="https://github.com/sapna008"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <AiOutlineGithub />
-                            </motion.a>
-
-                            <motion.a
-                                whileHover={{ scale: 1.2 }}
-                                href="https://www.linkedin.com/in/sapna-sarkar-b53625222/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <AiOutlineLinkedin />
-                            </motion.a>
-                            <motion.a
-                                whileHover={{ scale: 1.2 }}
-                                href="https://www.instagram.com/sapnasarkar55/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <AiOutlineInstagram />
-                            </motion.a>
+                        <div className="flex gap-4 sm:gap-6 flex-row text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#66ffcc] z-20">
+                            {[
+                                { icon: <AiOutlineGithub />, link: "https://github.com/sapna008" },
+                                { icon: <AiOutlineLinkedin />, link: "https://www.linkedin.com/in/sapna-sarkar-b53625222/" },
+                                { icon: <AiOutlineInstagram />, link: "https://www.instagram.com/sapnasarkar55/" }
+                            ].map((social, index) => (
+                                <motion.a
+                                    key={index}
+                                    whileHover={{ scale: 1.2 }}
+                                    href={social.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-[#4dffcc] transition-colors duration-300"
+                                >
+                                    {social.icon}
+                                </motion.a>
+                            ))}
                         </div>
                     </motion.div>
                 </motion.div>
-                
+
+                {/* Profile Image Section with Rotating Border */}
                 <motion.div
-                    className="relative inline-block"
+                    className="relative"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    {/* Rainbow rotating border container */}
-                    <div className="absolute inset-0 rounded-full p-1.5 bg-gradient-to-r from-purple-500 via-pink-500 via-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 animate-[spin_4s_linear_infinite_reverse] bg-[length:400%_100%]">
-                        {/* Image container */}
-                        <div className="rounded-full overflow-hidden bg-white">
-                            <motion.img
+                    <div className="relative w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px]">
+                        {/* Rotating border */}
+                        <div className="absolute inset-0 rounded-full animate-[spin_4s_linear_infinite] bg-gradient-to-r from-[#66ffcc] via-[#0ba8a8] via-red-500 via-[#6600ff] via-yellow-500 via-[#00ffff] to-purple-500 bg-[length:400%_100%]" />
+                        
+                        {/* Static white padding */}
+                        <div className="absolute inset-[3px] rounded-full bg-white" />
+                        
+                        {/* Main image - fixed, not rotating */}
+                        <div className="absolute inset-[4px] rounded-full overflow-hidden">
+                            <img
                                 src="https://i.ibb.co/YtjYhC4/IMG-20250115-WA0030.jpg"
                                 alt="Profile"
-                                className="w-[300px] md:w-[450px] h-[300px] md:h-[450px] object-cover"
-                                whileHover={{ scale: 1.1 }}
-                                transition={{ duration: 0.3 }}
+                                className="w-full h-full object-cover"
                             />
                         </div>
-                    </div>
-
-                    {/* Main image */}
-                    <div className="relative rounded-full overflow-hidden">
-                        <motion.img
-                            src="https://i.ibb.co/YtjYhC4/IMG-20250115-WA0030.jpg"
-                            alt="Profile"
-                            className="w-[300px] md:w-[450px] h-[300px] md:h-[450px] object-cover"
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.3 }}
-                        />
                     </div>
                 </motion.div>
             </div>
 
+            {/* Tech Stack Section */}
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 2 }}
-                className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 py-12 md:py-24"
             >
-                <p className="text-gray-200 mr-6">My Tech Stack</p>
-                <DiHtml5 className="text-orange-600 mx-2" />
-                <DiCss3 className="text-blue-600 mx-2" />
-                <DiJavascript1 className="text-yellow-500 mx-2" />
-                <DiReact className="text-blue-500 mx-2" />
-
-                <DiNodejsSmall className="text-green-500 mx-2" />
-
-
+                <p className="text-gray-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-0 sm:mr-6">
+                    My Tech Stack
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                    <DiHtml5 className="text-orange-600" />
+                    <DiCss3 className="text-blue-600" />
+                    <DiJavascript1 className="text-yellow-500" />
+                    <DiReact className="text-blue-500" />
+                    <DiNodejsSmall className="text-green-500" />
+                </div>
             </motion.div>
 
             <div className="absolute inset-0 hidden md:block">
                 <ShinyEffect left={0} top={0} size={1400} />
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;
