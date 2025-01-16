@@ -69,7 +69,7 @@ const Navbar = () => {
                     href="#" 
                     className='text-gray-200 text-xl sm:text-2xl font-semibold hover:text-[#12fdae] transition-colors duration-300'
                 >
-                    Sapna Sarkar
+                    Sapna <span className='text-[#66ffcc] text-lg font-bold'>.</span>
                 </a>
 
                 {/* Desktop Menu */}
