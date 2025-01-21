@@ -117,7 +117,7 @@ const Hero = () => {
                         {/* Main image - fixed, not rotating */}
                         <div className="absolute inset-[4px] rounded-full overflow-hidden">
                             <img
-                                src="https://i.ibb.co/z2dqsYz/myphoto.png"
+                                src="https://sapnasarkarprofile.netlify.app/"
                                 alt="Profile"
                                 className="w-full h-full object-cover"
                             />
